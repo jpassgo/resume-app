@@ -6,11 +6,13 @@ import { AddSkill } from './components/AddSkill';
 import { Skill } from './components/Skill';
 
 
+
 const App: React.FC = () => {
   const skills: readonly Skill[] = useSelector(
       (state: SkillState) => state.skills,
       shallowEqual
   )
+  
   const dispatch: Dispatch<any> = useDispatch()
 
   const saveSkill = React.useCallback(
@@ -34,5 +36,3 @@ const App: React.FC = () => {
 }
 
 export default App
-
-export default App;
